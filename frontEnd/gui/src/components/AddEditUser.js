@@ -22,6 +22,7 @@ class AddEditUser extends Component {
       upass : upass
     }
     
+    
     //JSON encoded while passing body and handled in backEnd
     axios.post(`http://localhost:8000/emp`, JSON.stringify(obj2))
       .then(res => {
@@ -35,10 +36,13 @@ class AddEditUser extends Component {
           <div className="user-add-edit">
           <form className = "form" onSubmit={this.handleSubmit}>
                 User ID:  <input type = "text" name= "uid" id= "uid" /><br/><br/>
-                UserName: <input type = "text" name= "uname" id= "username" /><br/><br/>
+                User Name: <input type = "text" name= "uname" id= "username"  /><br/><br/>
+                Mobile Number: <input type = "text" name= "mobilenumber" id= "mobilenumber" /><br/><br/>
                 Password: <input type = "text" name= "upass" id= "password" /><br/><br/>
+                Confirm Password: <input type = "text" name= "cpass" id= "confirmpassword" /><br/><br/>
                 <button type="submit">Submit</button>  
                 </form>
+                
              </div>
         );
       }
